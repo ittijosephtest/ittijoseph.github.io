@@ -3,17 +3,21 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <script src="https://unpkg.com/eva-icons"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
         --mainColor: #0376FE;
         }
 
+        .nav-text {
+        vertical-align: middle;
+        }
+
         h1 {
             font-family: 'Poppins', sans-serif;
             color: black;
-            margin-top:8%;
-            padding-left: 5%;
+            margin-top:50px;
             margin-bottom: 0px;
             
         }
@@ -21,46 +25,131 @@
             font-family:'IBM Plex Mono', monospace;
             font-weight: 400;
             color:#898B8E;
-            padding-left: 5%;
-            margin-top: 5px;
+            margin-top: 15px;
             max-width: 600px;
             justify-content: center;
 
         }
 
-        a { color: #0376FE;
+        .footer {
+            position: sticky;
+            left: 0;
+            bottom: 10;
+            width: 100%;
+            background-color: #FEFEFE;
+            text-align: center;
+        }
+
+
+        .center {
+            margin: auto;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+
+        a.one { color: #0376FE;
             background:
             linear-gradient(to bottom, var(--mainColor) 0%,
             var(--mainColor) 100%
             ); 
             background-position: 0 100%;
             background-repeat: repeat-x;
-            background-size: 4px 1.5px;
+            background-size: 0 0;
             text-decoration: none;
             transition: background-size .3s;
-
         }
 
-        a:hover {
+        a.one:hover {
         background-size: 4px 50px;
         color: white;
         }
 
+        a.two { opacity: 0.8;
+        }
+
+        a.two:hover {
+            opacity: 1;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 5px;
+            max-height: 80%;
+        }
+
+        .social-icons {
+            text-align: center;
+            align-items: baseline;
+        }  
+        .social-icons li {
+            display:inline-block;
+            list-style-type:none;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+        }
+        .social-icons li a {
+            border-bottom: none;
+        }
+        .social-icons li img {
+            width:40px;
+            height:40px;
+            margin-right: 40px;
+        }
+
+        
         @media screen and (min-width: 601px) {
             h1 {
             font-size: 46px;
+            padding-left: 10%;
             }
             p {
-            font-size: 20px;
+            font-size: 17px;
+            padding-left: 10%;
+            }
+            img{
+                margin-top: 40px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            ul{
+                padding-left: 0px;
             }
         }
 
         @media screen and (max-width: 600px) {
             h1 {
-            font-size: 30px;
+                font-size: 32px;
+                padding-left: 5%;
             }
             p {
-            font-size: 16px;
+                font-size: 16px;
+                padding-left: 5%;
+                margin-top: 30px;
+            }
+            img{
+                margin-top: 25px;
+                margin-left: 5%;
+                margin-right: 5%;
+                width: 88%;
+                height: 150px;
+                object-fit:cover;
+            }
+            ul{
+                padding-left: 0px;
             }
         }
 
@@ -89,10 +178,26 @@
   <header>
     <h1>Hi, I'm Itti</h1>
     <h1 style='margin-top: 0px;'><span id="retype">Product designer.</span></h1>
-    <p style='margin-bottom: 0px;'>I'm a senior year bachelors student <a href="https://www.iitg.ac.in/">@IIT Guwahati</a> and an upcoming UX Designer <a href="https://www.microsoft.com/en-in/">@Microsoft</a>.</p>
+    <p style='margin-bottom: 0px;'>I'm a senior year bachelors student <a class="one" href="https://www.iitg.ac.in/" target="blank">@IIT Guwahati</a> and an upcoming UX Designer <a class="one" href="https://www.microsoft.com/en-in/" target="blank">@Microsoft</a></p>
+    <p style='margin-top: 15px;'>Currently working on <a class="one" href="https://www.edunaut.in/" target="blank">@Edunaut</a></p>
   </header>
 
+  <div class="container">
+      <img src="images/Coming Soon.svg">
 
+  </div>
+
+
+<div class="footer">
+    <ul class="social-icons">
+        <li><a class="two" href="https://www.linkedin.com/in/itti-joseph-9987a9179/" target="blank"><img src='images/LinkedIn.svg' /></a></li>
+        <li><a class="two" href="https://www.instagram.com/itti.joseph/?hl=en" target="blank"><img src='images/Instagram.svg' /></a></li>
+        <li><a class="two" href="https://soundcloud.com/itti-joseph-635224344" target="blank"><img style="margin-right: 0px;" src='images/Soundcloud.svg' /></a></li>
+    </ul>
+
+    <center style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 300; color: #A19F9D; margin-bottom: 20px;">© 2020 - Designed and developed by Itti ✌</center>
+
+</div>
 
   <script src="typewriter.js"></script>
 </html>
