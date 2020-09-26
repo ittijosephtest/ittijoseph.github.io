@@ -31,13 +31,22 @@
 
         }
 
+        .page-container {
+        position: relative;
+        min-height: 80vh;
+        }
+
+        .content-wrap {
+        padding-bottom: 10px;    /* Footer height */
+        }
+
         .footer {
-            position: sticky;
-            left: 0;
-            bottom: 10;
+            color: brown;
+            position: absolute;
+            bottom: 0;
             width: 100%;
-            background-color: #FEFEFE;
-            text-align: center;
+            height: 10px;   
+
         }
 
 
@@ -171,33 +180,62 @@
             color: #0376FE;
             border-right: solid 3px #D3D6DE;
         }
+
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(file:///D:/Portfolio/images/Loader%20Test.gif) center no-repeat #000000;
+            background-size: 400px;
+        }
+
+
     </style>
 
   </head>
-  
-  <header>
-    <h1>Hi, I'm Itti</h1>
-    <h1 style='margin-top: 0px;'><span id="retype">Product designer.</span></h1>
-    <p style='margin-bottom: 0px;'>I'm a senior year bachelors student <a class="one" href="https://www.iitg.ac.in/" target="blank">@IIT Guwahati</a> and an upcoming UX Designer <a class="one" href="https://www.microsoft.com/en-in/" target="blank">@Microsoft</a></p>
-    <p style='margin-top: 15px;'>Currently working on <a class="one" href="https://www.edunaut.in/" target="blank">@Edunaut</a></p>
-  </header>
 
-  <div class="container">
-      <img src="images/Coming Soon.svg">
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <!-- all other page content -->
 
-  </div>
+        <div class="se-pre-con"></div>
+            <header>
+                <h1>Hi, I'm Itti</h1>
+                <h1 style='margin-top: 0px;'><span id="retype">Product designer.</span></h1>
+                <p style='margin-bottom: 0px;'>I'm a senior year bachelors student <a class="one" href="https://www.iitg.ac.in/" target="blank">@IIT Guwahati</a> and an upcoming UX Designer <a class="one" href="https://www.microsoft.com/en-in/" target="blank">@Microsoft</a></p>
+                <p style='margin-top: 15px;'>Currently working on <a class="one" href="https://www.edunaut.in/" target="blank">@Edunaut</a></p>
+            </header>
+        
+            <div class="container">
+                <img src="images/Coming Soon.svg">
+        
+            </div>
 
 
-<div class="footer">
-    <ul class="social-icons">
-        <li><a class="two" href="https://www.linkedin.com/in/itti-joseph-9987a9179/" target="blank"><img src='images/LinkedIn.svg' /></a></li>
-        <li><a class="two" href="https://www.instagram.com/itti.joseph/?hl=en" target="blank"><img src='images/Instagram.svg' /></a></li>
-        <li><a class="two" href="https://soundcloud.com/itti-joseph-635224344" target="blank"><img style="margin-right: 0px;" src='images/Soundcloud.svg' /></a></li>
-    </ul>
+      </div>
+      <footer class="footer">
+        <ul class="social-icons">
+            <li><a class="two" href="https://www.linkedin.com/in/itti-joseph-9987a9179/" target="blank"><img src='images/LinkedIn.svg' /></a></li>
+            <li><a class="two" href="https://www.instagram.com/itti.joseph/?hl=en" target="blank"><img src='images/Instagram.svg' /></a></li>
+            <li><a class="two" href="https://soundcloud.com/itti-joseph-635224344" target="blank"><img style="margin-right: 0px;" src='images/Soundcloud.svg' /></a></li>
+        </ul>
 
-    <center style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 300; color: #A19F9D; margin-bottom: 20px;">© 2020 - Made with 💙</center>
+        <center style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 300; color: #A19F9D; margin-bottom: 20px;">© 2020 - Designed and developed by Itti ✌</center>
 
-</div>
+      </footer>
+    </div>
+   </body>
+
+
 
   <script src="typewriter.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script src="preloader.js"></script>
 </html>
